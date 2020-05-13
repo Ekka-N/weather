@@ -1,0 +1,28 @@
+@import './variables.scss';
+
+@mixin sizeBox($width, $height: $width) {
+    max-width: $width;
+    max-height: $height;
+    min-width: $width/2;
+    min-height: $height/2;
+    padding: $width/20;
+    box-sizing: border-box;
+}
+
+@mixin button($size) {
+    button {
+        background-color: $primaryColor;
+        border: 1px solid #999;
+        font-family: $fontText;
+        padding: $size;
+        border-radius: $size;
+        outline: none;
+        cursor: pointer;
+        transition: all .5s;
+        @content;
+
+        &:hover {
+            background-color: darken($primaryColor, 20);
+        }
+    }
+}

@@ -1,0 +1,13 @@
+@import "../../scss/variables.scss";
+@import "../../scss/mixins.scss";
+
+.App__wrap {
+    @include sizeBox(600px);
+    box-shadow: 5px 5px 15px #999;
+    background-color: $primaryColor;
+    margin: 5em auto;
+
+    h1 {
+        font-family: $fontTitle;
+    }
+}

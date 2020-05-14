@@ -53,9 +53,16 @@ class App extends React.Component {
   render() {
     return (
       <div className="App__wrap">
-      <h1>Получи прогноз погоды на сегодня!</h1>
-      <Form getWeater={this.getWeater}/>
-      <Weather info={this.state.info} />
+        <h1 className="title">
+          Погодное приложение
+          <p className="subtitle">
+            Узнай погоду в любом городе!
+          </p>
+        </h1>
+      <div className="App__content"> 
+        <Form getWeater={this.getWeater}/>
+        <Weather info={this.state.info} />
+      </div>
       </div>
     );
   }

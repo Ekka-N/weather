@@ -2,9 +2,11 @@
 @import "../../scss/mixins.scss";
 
 .Form__wrap {
-    @include button($size: 10px) {
-        color: #555;
+    @include button(10px);
+    @include input(10px) {
+        margin-right: 10px;
     }
 
     display: flex;
+
 }

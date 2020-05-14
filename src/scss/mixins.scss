@@ -12,9 +12,10 @@
 @mixin button($size) {
     button {
         background-color: $primaryColor;
-        border: 1px solid #999;
+        border: 1px solid $fontColor;
         font-family: $fontText;
-        padding: $size;
+        padding: $size/2;
+        color: $fontColor;
         border-radius: $size;
         outline: none;
         cursor: pointer;
@@ -24,5 +25,18 @@
         &:hover {
             background-color: darken($primaryColor, 20);
         }
+    }
+}
+
+@mixin input($size) {
+    input {
+        background-color: $primaryColor;
+        border: 1px solid $fontColor;
+        font-family: $fontText;
+        padding: $size/2;
+        color: $fontColor;
+        border-radius: $size;
+        outline: none;
+        @content;
     }
 }

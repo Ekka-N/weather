@@ -2,12 +2,30 @@
 @import "../../scss/mixins.scss";
 
 .App__wrap {
-    @include sizeBox(600px);
+    @include sizeBox(700px);
     box-shadow: 5px 5px 15px #999;
     background-color: $primaryColor;
     margin: 5em auto;
+    display: flex;
 
-    h1 {
+
+    .title {
         font-family: $fontTitle;
+        color: $fontColor;
+        font-size: 25px;
+        width: 45%;
+        margin: auto 0;
+        text-align: center;
+
+        .subtitle {
+            font-size: 17px;
+            font-weight: normal;
+        }
     }
+}
+
+
+.App__content {
+    box-shadow: 5px 5px 15px #999;
+    padding: 5%;
 }

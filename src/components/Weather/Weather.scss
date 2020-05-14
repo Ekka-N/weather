@@ -1,0 +1,10 @@
+@import "../../scss/variables.scss"; 
+
+.Weater__text {
+    font-family: $fontText;
+    color: $fontColor;
+}
+
+.Weater__city {
+    font-weight: bold;
+}

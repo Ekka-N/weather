@@ -2,7 +2,7 @@
 @import "../../scss/mixins.scss";
 
 .App__wrap {
-    @include sizeBox(700px);
+    @include sizeBox($sizeBox);
     box-shadow: 5px 5px 15px #999;
     background-color: $primaryColor;
     margin: 5em auto;
@@ -28,4 +28,15 @@
 .App__content {
     box-shadow: 5px 5px 15px #999;
     padding: 5%;
+}
+
+@media (max-width: 600px) {
+    .App__wrap {
+        @include sizeBox($sizeBox/2);
+        flex-direction: column;
+
+        .title { 
+            width: 100%;
+        }
+    }
 }

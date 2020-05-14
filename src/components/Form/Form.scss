@@ -4,9 +4,17 @@
 .Form__wrap {
     @include button(10px);
     @include input(10px) {
-        margin-right: 10px;
+        margin-right: 5px;
     }
 
     display: flex;
+    justify-content: space-around;
 
+}
+
+@media (max-width: 6800px) {
+    .Form__wrap {
+        @include button(5px);
+        @include input(5px)
+    }
 }
